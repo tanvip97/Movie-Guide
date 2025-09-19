@@ -6,7 +6,7 @@ const inputBox = document.querySelector('.inputBox');
 const getMovieInfo = async (movie) => {
     try{
         const myApiKey = "3a0cf17c";
-        const url = `http://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`;
+        const url = `https://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`;
 
         const response = await fetch(url);
         
@@ -85,4 +85,5 @@ searchForm.addEventListener('submit', (evt) => {
     else{
         showErrorMessage("Enter movie name to get movie information");   
     };
+
 })
